@@ -1,16 +1,10 @@
-# deskapp
+# TimelyClock
 
-DeskApp Admin is a free to use Bootstrap 4 admin template. This template uses the default Bootstrap 4 styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards.
+TimelyClock is an automated time clock that can be used in any workplace with multiple employees. It allows for efficient check-ins and check-outs for workers at a company. 
 
-Theme uses several libraries for charts, calendar, text forms, date range, upload area, form autocomplete, range slider, progress bars, notifications and much more.
 
-We would love to see how you use this awesome admin template. You can notify us about your site. Once the list will grown long enough we will write a post similar to this to showcase the best examples.
-
-# Quick start
-Several quick start options are available:
-* Clone the repo: git clone https://github.com/dropways/deskapp.git
-* Install with npm: 
-  `npm install deskapp`
+# About
+We are a team of students from Poolesville High School in Maryland who are passionate about creating innovations that help our community. We have decided to create a product that allows users with various types of disabilities to easily clock in and out of different parts of their day. 
 
 ## Built With
 * Bootstrap 4
@@ -50,12 +44,12 @@ A fully functional demo is available at
 - demo 1 https://dropways.github.io/deskapp/
 - demo 2 https://deskapp-dashboard.herokuapp.com/
 
-## Bugs Reports
-Have a bug or a feature request? Please open a new issue.
+## Contact
+Having trouble with TimelyClock? Please contact applesonapples506@gmail.com.
 
 # MIT License
 
-Copyright (c) 2018 DeskApp
+Copyright (c) 2020 TimelyClock
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
