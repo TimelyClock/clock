@@ -527,7 +527,7 @@ textarea.form-control{
 .form-control:focus ~ .input-group-append .fa{
 	color: #1b00ff;
 }
-.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-prepend > .input-group-text, .input-group-lg > .input-group-append > .input-group-text, .input-group-lg > .input-group-prepend > .btn, .input-group-lg > .input-group-append > .btn{
+.form-control-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-prepend > .input-group-text, .input-group-lg > .input-group-append > .input-group-text, .input-group-lg > .input-group-prepend > , .input-group-lg > .input-group-append > .btn{
 	height: 50px;
 	font-size: 16px;
 }
@@ -589,7 +589,7 @@ textarea.form-control{
 	font-family: 'Inter', sans-serif;
 	letter-spacing: 0;
 	font-weight: 500;
-	padding: .438rem 1rem;
+	padding: .9000rem 1rem;
 }
 .btn-lg{
 	padding: .657rem 1rem;
