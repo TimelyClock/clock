@@ -40,7 +40,7 @@
 
 .button2:hover {
   background-color: #FF0000;
-  color: red;
+  color: white;
 }
 
 </style>
@@ -358,43 +358,44 @@
 					<div class="col-md-8">
 						<button class="button button1">Start</button>
 						<button class="button button2">Stop</button>
+						<div id="clock">8:10:45</div> 
+  
+						<script> 
+						setInterval(showTime, 1000); 
+						function showTime() { 
+							let time = new Date(); 
+							let hour = time.getHours(); 
+							let min = time.getMinutes(); 
+							let sec = time.getSeconds(); 
+							am_pm = "AM"; 
+
+							if (hour > 12) { 
+								hour -= 12; 
+								am_pm = "PM"; 
+							} 
+							if (hour == 0) { 
+								hr = 12; 
+								am_pm = "AM"; 
+							} 
+
+							hour = hour < 10 ? "0" + hour : hour; 
+							min = min < 10 ? "0" + min : min; 
+							sec = sec < 10 ? "0" + sec : sec; 
+
+							let currentTime = hour + ":"  
+								+ min + ":" + sec + am_pm; 
+
+							document.getElementById("clock") 
+								.innerHTML = currentTime; 
+						} 
+
+						showTime(); 
+						</script> 
 					</div>
 					
 				</div>
 			</div>
-			<div id="clock">8:10:45</div> 
-  
-    			<script> 
-        		setInterval(showTime, 1000); 
-        		function showTime() { 
-            			let time = new Date(); 
-           			let hour = time.getHours(); 
-            			let min = time.getMinutes(); 
-            			let sec = time.getSeconds(); 
-            			am_pm = "AM"; 
-  
-            			if (hour > 12) { 
-                			hour -= 12; 
-                			am_pm = "PM"; 
-            			} 
-           			if (hour == 0) { 
-                			hr = 12; 
-                			am_pm = "AM"; 
-            			} 
-  
-			    	hour = hour < 10 ? "0" + hour : hour; 
-			    	min = min < 10 ? "0" + min : min; 
-			    	sec = sec < 10 ? "0" + sec : sec; 
-
-			    	let currentTime = hour + ":"  
-					+ min + ":" + sec + am_pm; 
-
-			    	document.getElementById("clock") 
-					.innerHTML = currentTime; 
-			} 
-
-			showTime(); 
-   		 	</script> 
+			
 						
 			<div class="row">
 				<div class="col-xl-3 mb-30">
