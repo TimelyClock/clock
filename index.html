@@ -1,24 +1,117 @@
 <!DOCTYPE html>
 <style>
+.stopwatch {
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 23px;
+  width: 100%;
+  padding-top: 25px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 350%;
+  width: 60%;
+
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+.time {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 48px;
+}
+
+.gold {
+  font-weight: 900;
+
+  color: #f2c94c;
+  text-shadow: 0 0 0px #fff, 0 0 50px #f2c94c;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+
+  width: 187px;
+}
+
+
+#playButton {
+  display: block;
+}
+
+#pauseButton {
+  display: none;
+}
+
 #clock { 
-	font-size: 100%; 
+	font-size: 625%; 
 	width: 100%; 
+	height: 650%
         margin: 2px; 
         ext-align: center; 
         border: 2px solid black; 
         border-radius: 20px; 
+		text-align: center;
         } 
 .button {
   border: none;
   color: black;
-  padding: 72px 700px;
+  padding: 50% 210%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 40px;
+  font-size: 500%;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+}
+.buttonbigger {
+  border: none;
+  color: black;
+  padding: 50% 198.3%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 500%;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.buttonbigger1 {
+  border: none;
+  color: black;
+  padding: 35% 202.7%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 500%;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.buttonsmall {
+  border: none;
+  color: black;
+  padding: 8% 18%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 300%;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.buttonsmall{
+	background-color: #FFFFFF ;
+	color: black;
 }
 
 .button1 {
@@ -42,13 +135,91 @@
   background-color: #FF0000;
   color: white;
 }
+.button3 {
+	background-color: gray;
+	color: black;
+	border: 2px solid #000000;
+}
+.button3:hover {
+	background-color: #000000;
+	color: white;
+}
+.dropdown {
+  height: 10vh;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projects,
+.products {
+  position: relative;
+}
+
+.projects ul,
+.products ul {
+  margin-top: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background: white;
+  left: 0px;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+.projects li,
+.products li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects li:hover,
+.products li:hover {
+  background-color: rgb(197, 173, 181);
+}
+
+.projects a,
+.products a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown button,
+.home {
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.projects button:focus + ul,
+.products button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
 
 </style>
 <html>
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+	<title>TimelyClock - Main Product Page</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -78,6 +249,7 @@
 	</script>
 </head>
 <body>
+<!--below is a loading screen-->
 	<div class="pre-loader">
 		<div class="pre-loader-box">
 			<div class="loader-logo"><img src="vendors/images/deskapp-logo.svg" alt=""></div>
@@ -140,62 +312,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="user-notification">
-				<div class="dropdown">
-					<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
-						<i class="icon-copy dw dw-notification"></i>
-						<span class="badge notification-active"></span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div class="notification-list mx-h-350 customscroll">
-							<ul>
-								<li>
-									<a href="#">
-										<img src="vendors/images/img.jpg" alt="">
-										<h3>John Doe</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo1.jpg" alt="">
-										<h3>Lea R. Frith</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo2.jpg" alt="">
-										<h3>Erik L. Richards</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo3.jpg" alt="">
-										<h3>John Doe</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo4.jpg" alt="">
-										<h3>Renee I. Hansen</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/img.jpg" alt="">
-										<h3>Vicki M. Coleman</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 			<div class="user-info-dropdown">
 				<div class="dropdown">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
@@ -353,11 +470,34 @@
 
 	<div class="main-container">
 		<div class="pd-ltr-20">
-			<div class="card-box pd-20 height-50-p mb-15">
-				<div class="row align-items-center">
-					<div class="col-md-8">
-						<button class="button button1">Start</button>
-						<button class="button button2">Stop</button>
+			
+			
+						
+			
+			<div class="row">
+				<div class="col-xl-8 mb-30">
+					<div class="card-box height-100-p pd-20">
+						<div class="controls">
+						<button class="buttonPlay">
+							<button id = "playButton" class="button button1 buttonPlay">Start</button>
+
+							<button id = "pauseButton" class="button2 buttonbigger buttonPlay">Pause</button>
+						</button>
+						</div>		
+						<div class="controls">
+						<button class="buttonReset">
+							<button id = "resetButton" class="buttonbigger1 button3 buttonReset">Clock Out</button>
+						</button>
+						</div>
+						
+					
+						
+						
+						 
+					</div>
+				</div>
+				<div class="col-xl-4 mb-30">
+					<div class="card-box height-100-p pd-20">
 						<div id="clock">8:10:45</div> 
   
 						<script> 
@@ -383,20 +523,103 @@
 							sec = sec < 10 ? "0" + sec : sec; 
 
 							let currentTime = hour + ":"  
-								+ min + ":" + sec + am_pm; 
+								+ min + am_pm; 
 
 							document.getElementById("clock") 
 								.innerHTML = currentTime; 
 						} 
 
 						showTime(); 
-						</script> 
+						</script>
+						<div class="stopwatch">
+						  <h1><span class="gold">STOPWATCH</h1>
+						  <div class="circle">
+							<span class="time" id="display">00:00:00</span>
+						  </div>
+
+						  
+						</div>
+					<script>
+					function timeToString(time) {
+				  let diffInHrs = time / 3600000;
+				  let hh = Math.floor(diffInHrs);
+
+				  let diffInMin = (diffInHrs - hh) * 60;
+				  let mm = Math.floor(diffInMin);
+
+				  let diffInSec = (diffInMin - mm) * 60;
+				  let ss = Math.floor(diffInSec);
+
+				  let diffInMs = (diffInSec - ss) * 100;
+				  let ms = Math.floor(diffInMs);
+					
+				  let formattedHH = hh.toString().padStart(2, "0");
+				  let formattedMM = mm.toString().padStart(2, "0");
+				  let formattedSS = ss.toString().padStart(2, "0");
+				  let formattedMS = ms.toString().padStart(2, "0");
+
+				  return `${formattedHH}:${formattedMM}:${formattedSS}`;
+				}
+
+				// Declare variables to use in our functions below
+
+				let startTime;
+				let elapsedTime = 0;
+				let timerInterval;
+
+				// Create function to modify innerHTML
+
+				function print(txt) {
+				  document.getElementById("display").innerHTML = txt;
+				}
+
+				// Create "start", "pause" and "reset" functions
+
+				function start() {
+				  startTime = Date.now() - elapsedTime;
+				  timerInterval = setInterval(function printTime() {
+					elapsedTime = Date.now() - startTime;
+					print(timeToString(elapsedTime));
+				  }, 10);
+				  showButton("PAUSE");
+				}
+
+				function pause() {
+				  clearInterval(timerInterval);
+				  showButton("PLAY");
+				}
+
+				function reset() {
+				  clearInterval(timerInterval);
+				  print("00:00:00");
+				  elapsedTime = 0;
+				  showButton("PLAY");
+				}
+
+				// Create function to display buttons
+
+				function showButton(buttonKey) {
+				  const buttonToShow = buttonKey === "PLAY" ? playButton : pauseButton;
+				  const buttonToHide = buttonKey === "PLAY" ? pauseButton : playButton;
+				  buttonToShow.style.display = "block";
+				  buttonToHide.style.display = "none";
+				}
+				// Create event listeners
+
+				let playButton = document.getElementById("playButton");
+				let pauseButton = document.getElementById("pauseButton");
+				let resetButton = document.getElementById("resetButton");
+
+				playButton.addEventListener("click", start);
+				pauseButton.addEventListener("click", pause);
+				resetButton.addEventListener("click", reset);
+				</script>
+				 
 					</div>
 					
 				</div>
+				
 			</div>
-			
-						
 			<div class="row">
 				<div class="col-xl-3 mb-30">
 					<div class="card-box height-100-p widget-style1">
@@ -405,8 +628,17 @@
 								<div id="chart"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">2020</div>
-								<div class="weight-600 font-14">Contact</div>
+								<button onclick = "myFunction1()" class="button buttonsmall">Cook</button>
+								<p id = "cook"></p>
+								<script>
+									function myFunction1() {
+										document.getElementById("cook").innerHTML = "Current Selected Job: <b>Cook</b>";
+										document.getElementById("prep").innerHTML = "";
+										document.getElementById("hugs").innerHTML = "";
+										document.getElementById("guard").innerHTML = "";
+									}
+								</script>
+
 							</div>
 						</div>
 					</div>
@@ -418,8 +650,16 @@
 								<div id="chart2"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">400</div>
-								<div class="weight-600 font-14">Deals</div>
+								<button onclick = "myFunction2()" class="button buttonsmall">Prep</button>
+								<p id = "prep"></p>
+								<script>
+									function myFunction2() {
+										document.getElementById("cook").innerHTML = "";
+										document.getElementById("prep").innerHTML = "Current Selected Job: <b>Prep</b>"
+										document.getElementById("hugs").innerHTML = "";
+										document.getElementById("guard").innerHTML = "";
+									}
+								</script>
 							</div>
 						</div>
 					</div>
@@ -431,8 +671,16 @@
 								<div id="chart3"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">350</div>
-								<div class="weight-600 font-14">Campaign</div>
+								<button onclick = "myFunction3()" class="button buttonsmall">Hugs</button>
+								<p id = "hugs"></p>
+								<script>
+									function myFunction3() {
+										document.getElementById("prep").innerHTML = "";
+										document.getElementById("cook").innerHTML = "";
+										document.getElementById("hugs").innerHTML = "Current Selected Job: <b>Hugs</b>";
+										document.getElementById("guard").innerHTML = "";
+									}
+								</script>
 							</div>
 						</div>
 					</div>
@@ -444,176 +692,32 @@
 								<div id="chart4"></div>
 							</div>
 							<div class="widget-data">
-								<div class="h4 mb-0">$6060</div>
-								<div class="weight-600 font-14">Worth</div>
+								<button onclick = "myFunction4()" class="button buttonsmall">Guard</button>
+								<p id = "guard"></p>
+								<script>
+									function myFunction4() {
+										document.getElementById("prep").innerHTML = "";
+										document.getElementById("cook").innerHTML = "";
+										document.getElementById("hugs").innerHTML = "";
+										document.getElementById("guard").innerHTML = "Current Selected Job: <b>Guard</b>";
+									}
+								</script>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xl-8 mb-30">
-					<div class="card-box height-100-p pd-20">
-						<h2 class="h4 mb-20">Activity</h2>
-						<div id="chart5"></div>
-					</div>
-				</div>
-				<div class="col-xl-4 mb-30">
-					<div class="card-box height-100-p pd-20">
-						<h2 class="h4 mb-20">Lead Target</h2>
-						<div id="chart6"></div>
-					</div>
-				</div>
-			</div>
 			<div class="card-box mb-30">
-				<h2 class="h4 pd-20">Best Selling Products</h2>
-				<table class="data-table table nowrap">
-					<thead>
-						<tr>
-							<th class="table-plus datatable-nosort">Product</th>
-							<th>Name</th>
-							<th>Color</th>
-							<th>Size</th>
-							<th>Price</th>
-							<th>Oty</th>
-							<th class="datatable-nosort">Action</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="table-plus">
-								<img src="vendors/images/product-1.jpg" width="70" height="70" alt="">
-							</td>
-							<td>
-								<h5 class="font-16">Shirt</h5>
-								by John Doe
-							</td>
-							<td>Black</td>
-							<td>M</td>
-							<td>$1000</td>
-							<td>1</td>
-							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="table-plus">
-								<img src="vendors/images/product-2.jpg" width="70" height="70" alt="">
-							</td>
-							<td>
-								<h5 class="font-16">Boots</h5>
-								by Lea R. Frith
-							</td>
-							<td>brown</td>
-							<td>9UK</td>
-							<td>$900</td>
-							<td>1</td>
-							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="table-plus">
-								<img src="vendors/images/product-3.jpg" width="70" height="70" alt="">
-							</td>
-							<td>
-								<h5 class="font-16">Hat</h5>
-								by Erik L. Richards
-							</td>
-							<td>Orange</td>
-							<td>M</td>
-							<td>$100</td>
-							<td>4</td>
-							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="table-plus">
-								<img src="vendors/images/product-4.jpg" width="70" height="70" alt="">
-							</td>
-							<td>
-								<h5 class="font-16">Long Dress</h5>
-								by Renee I. Hansen
-							</td>
-							<td>Gray</td>
-							<td>L</td>
-							<td>$1000</td>
-							<td>1</td>
-							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="table-plus">
-								<img src="vendors/images/product-5.jpg" width="70" height="70" alt="">
-							</td>
-							<td>
-								<h5 class="font-16">Blazer</h5>
-								by Vicki M. Coleman
-							</td>
-							<td>Blue</td>
-							<td>M</td>
-							<td>$1000</td>
-							<td>1</td>
-							<td>
-								<div class="dropdown">
-									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-										<i class="dw dw-more"></i>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-										<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-									</div>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS7EXSonbZ7IVj8SPYEpD0el_Nqr3FZAWtZkR9w35h2xnG7uWqmh45vhr6xv63ZDyL53f75nSpE7U7q/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600" frameBorder="0" style="border: 1px solid #dedede;background: transparent;"></iframe>
 			</div>
 			<div class="footer-wrap pd-20 mb-20 card-box">
-				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+				Time Clock Product Designed By: <a href="https://github.com/TimelyClock/clock.git" target="_blank">TimelyClock</a>
 			</div>
 		</div>
 	</div>
 	<!-- js -->
+	<script src="timer.js"></script>
+
 	<script src="vendors/scripts/core.js"></script>
 	<script src="vendors/scripts/script.min.js"></script>
 	<script src="vendors/scripts/process.js"></script>
