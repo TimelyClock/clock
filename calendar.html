@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 5% 45%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 350%;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008C8A;} 
+</style>
+
 <html>
 <head>
 	<!-- Basic Page Info -->
@@ -94,62 +111,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="user-notification">
-				<div class="dropdown">
-					<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
-						<i class="icon-copy dw dw-notification"></i>
-						<span class="badge notification-active"></span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div class="notification-list mx-h-350 customscroll">
-							<ul>
-								<li>
-									<a href="#">
-										<img src="vendors/images/img.jpg" alt="">
-										<h3>John Doe</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo1.jpg" alt="">
-										<h3>Lea R. Frith</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo2.jpg" alt="">
-										<h3>Erik L. Richards</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo3.jpg" alt="">
-										<h3>John Doe</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo4.jpg" alt="">
-										<h3>Renee I. Hansen</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/img.jpg" alt="">
-										<h3>Vicki M. Coleman</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
+			
 			<div class="user-info-dropdown">
 				<div class="dropdown">
 					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
@@ -212,37 +174,7 @@
 					</div>
 				</div>
 
-				<h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
-				<div class="sidebar-radio-group pb-30 mb-10">
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-1" name="menu-list-icon" class="custom-control-input" value="icon-list-style-1" checked="">
-						<label class="custom-control-label" for="sidebariconlist-1"><i class="ion-minus-round"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-2" name="menu-list-icon" class="custom-control-input" value="icon-list-style-2">
-						<label class="custom-control-label" for="sidebariconlist-2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-3" name="menu-list-icon" class="custom-control-input" value="icon-list-style-3">
-						<label class="custom-control-label" for="sidebariconlist-3"><i class="dw dw-check"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-4" name="menu-list-icon" class="custom-control-input" value="icon-list-style-4" checked="">
-						<label class="custom-control-label" for="sidebariconlist-4"><i class="icon-copy dw dw-next-2"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-5" name="menu-list-icon" class="custom-control-input" value="icon-list-style-5">
-						<label class="custom-control-label" for="sidebariconlist-5"><i class="dw dw-fast-forward-1"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-6" name="menu-list-icon" class="custom-control-input" value="icon-list-style-6">
-						<label class="custom-control-label" for="sidebariconlist-6"><i class="dw dw-next"></i></label>
-					</div>
-				</div>
-
-				<div class="reset-options pt-30 text-center">
-					<button class="btn btn-danger" id="reset-settings">Reset Settings</button>
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -328,78 +260,21 @@
 					</div>
 				</div>
 				<div class="pd-20 card-box mb-30">
-					<div class="calendar-wrap">
-						<div id='calendar'></div>
-					</div>
-					<!-- calendar modal -->
-					<div id="modal-view-event" class="modal modal-top fade calendar-modal">
-						<div class="modal-dialog modal-dialog-centered">
-							<div class="modal-content">
-								<div class="modal-body">
-									<h4 class="h4"><span class="event-icon weight-400 mr-3"></span><span class="event-title"></span></h4>
-									<div class="event-body"></div>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
+					<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%237986CB&amp;ctz=America%2FNew_York&amp;src=bzJqZ3ZuZXVjN3VwODg2cjdqbG12NXI4cnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23D50000&amp;showPrint=0" style="border-width:0" width="1500" height="800" frameborder="0" scrolling="no"></iframe>
+					<a href="https://calendar.google.com/calendar/u/7/r" <button class="button button2">Add Shift</button></a>
 
-					<div id="modal-view-event-add" class="modal modal-top fade calendar-modal">
-						<div class="modal-dialog modal-dialog-centered">
-							<div class="modal-content">
-								<form id="add-event">
-									<div class="modal-body">
-										<h4 class="text-blue h4 mb-10">Add Event Detail</h4>
-										<div class="form-group">
-											<label>Event name</label>
-											<input type="text" class="form-control" name="ename">
-										</div>
-										<div class="form-group">
-											<label>Event Date</label>
-											<input type='text' class="datetimepicker form-control" name="edate">
-										</div>
-										<div class="form-group">
-											<label>Event Description</label>
-											<textarea class="form-control" name="edesc"></textarea>
-										</div>
-										<div class="form-group">
-											<label>Event Color</label>
-											<select class="form-control" name="ecolor">
-												<option value="fc-bg-default">fc-bg-default</option>
-												<option value="fc-bg-blue">fc-bg-blue</option>
-												<option value="fc-bg-lightgreen">fc-bg-lightgreen</option>
-												<option value="fc-bg-pinkred">fc-bg-pinkred</option>
-												<option value="fc-bg-deepskyblue">fc-bg-deepskyblue</option>
-											</select>
-										</div>
-										<div class="form-group">
-											<label>Event Icon</label>
-											<select class="form-control" name="eicon">
-												<option value="circle">circle</option>
-												<option value="cog">cog</option>
-												<option value="group">group</option>
-												<option value="suitcase">suitcase</option>
-												<option value="calendar">calendar</option>
-											</select>
-										</div>
-									</div>
-									<div class="modal-footer">
-										<button type="submit" class="btn btn-primary" >Save</button>
-										<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
 				</div>
+				
 			</div>
+			
 			<div class="footer-wrap pd-20 mb-20 card-box">
-				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+				Time Clock Product Designed By: <a href="https://github.com/TimelyClock/clock.git" target="_blank">TimelyClock</a>
 			</div>
 		</div>
+		
 	</div>
+	
+	
 	<!-- js -->
 	<script src="vendors/scripts/core.js"></script>
 	<script src="vendors/scripts/script.min.js"></script>
